@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description"
+        content="Explore Pranav's creative portfolio featuring interactive web projects, terminal-style interfaces, and innovative designs with modern animations and responsive layouts.">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&amp;display=swap"
+        rel="stylesheet">
+
+
+    <title>Pranav's Portfolio | Creative Developer &amp; Designer</title>
+    <!-- SEO Description -->
+    <meta name="description"
+        content="Explore Pranav's creative portfolio featuring interactive web projects, terminal-style interfaces, and innovative designs with modern animations and responsive layouts.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Performance optimization: Preload critical resources -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+
+    <!-- Header Scripts -->
+    <script id="header-scripts">
+        // This script tag will be replaced with actual scripts.head content
+        if (window.scripts && window.scripts.head) {
+            document.getElementById('header-scripts').outerHTML = window.scripts.head;
+        }
+    </script>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+    <script type="application/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+    <!-- Core CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // render the settings object
+        //console.log('settings', [object Object]);
+        document.addEventListener('DOMContentLoaded', function () {
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: {
+                                DEFAULT: '#000000',
+                                50: '#f8f8f8',
+                                100: '#e8e8e8',
+                                200: '#d3d3d3',
+                                300: '#a3a3a3',
+                                400: '#737373',
+                                500: '#525252',
+                                600: '#404040',
+                                700: '#262626',
+                                800: '#171717',
+                                900: '#0a0a0a',
+                                950: '#030303',
+                            },
+                            secondary: {
+                                DEFAULT: '#00FF88',
+                                50: '#f8f8f8',
+                                100: '#e8e8e8',
+                                200: '#d3d3d3',
+                                300: '#a3a3a3',
+                                400: '#737373',
+                                500: '#525252',
+                                600: '#404040',
+                                700: '#262626',
+                                800: '#171717',
+                                900: '#0a0a0a',
+                                950: '#030303',
+                            },
+                            accent: {
+                                DEFAULT: '',
+                                50: '#f8f8f8',
+                                100: '#e8e8e8',
+                                200: '#d3d3d3',
+                                300: '#a3a3a3',
+                                400: '#737373',
+                                500: '#525252',
+                                600: '#404040',
+                                700: '#262626',
+                                800: '#171717',
+                                900: '#0a0a0a',
+                                950: '#030303',
+                            },
+                        },
+                        fontFamily: {
+                            sans: ['Rubik', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                            heading: ['Cabin', 'Inter', 'system-ui', 'sans-serif'],
+                            body: ['Cabin', 'Inter', 'system-ui', 'sans-serif'],
+                        },
+                        spacing: {
+                            '18': '4.5rem',
+                            '22': '5.5rem',
+                            '30': '7.5rem',
+                        },
+                        maxWidth: {
+                            '8xl': '88rem',
+                            '9xl': '96rem',
+                        },
+                        animation: {
+                            'fade-in': 'fadeIn 0.5s ease-in',
+                            'fade-out': 'fadeOut 0.5s ease-out',
+                            'slide-up': 'slideUp 0.5s ease-out',
+                            'slide-down': 'slideDown 0.5s ease-out',
+                            'slide-left': 'slideLeft 0.5s ease-out',
+                            'slide-right': 'slideRight 0.5s ease-out',
+                            'scale-in': 'scaleIn 0.5s ease-out',
+                            'scale-out': 'scaleOut 0.5s ease-out',
+                            'spin-slow': 'spin 3s linear infinite',
+                            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                            'bounce-slow': 'bounce 3s infinite',
+                            'float': 'float 3s ease-in-out infinite',
+                        },
+                        keyframes: {
+                            fadeIn: {
+                                '0%': { opacity: '0' },
+                                '100%': { opacity: '1' },
+                            },
+                            fadeOut: {
+                                '0%': { opacity: '1' },
+                                '100%': { opacity: '0' },
+                            },
+                            slideUp: {
+                                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                                '100%': { transform: 'translateY(0)', opacity: '1' },
+                            },
+                            slideDown: {
+                                '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                                '100%': { transform: 'translateY(0)', opacity: '1' },
+                            },
+                            slideLeft: {
+                                '0%': { transform: 'translateX(20px)', opacity: '0' },
+                                '100%': { transform: 'translateX(0)', opacity: '1' },
+                            },
+                            slideRight: {
+                                '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                                '100%': { transform: 'translateX(0)', opacity: '1' },
+                            },
+                            scaleIn: {
+                                '0%': { transform: 'scale(0.9)', opacity: '0' },
+                                '100%': { transform: 'scale(1)', opacity: '1' },
+                            },
+                            scaleOut: {
+                                '0%': { transform: 'scale(1.1)', opacity: '0' },
+                                '100%': { transform: 'scale(1)', opacity: '1' },
+                            },
+                            float: {
+                                '0%, 100%': { transform: 'translateY(0)' },
+                                '50%': { transform: 'translateY(-10px)' },
+                            },
+                        },
+                        aspectRatio: {
+                            'portrait': '3/4',
+                            'landscape': '4/3',
+                            'ultrawide': '21/9',
+                        },
+                    },
+                },
+                variants: {
+                    extend: {
+                        opacity: ['disabled'],
+                        cursor: ['disabled'],
+                        backgroundColor: ['active', 'disabled'],
+                        textColor: ['active', 'disabled'],
+                    },
+                },
+            }
+        });
+    </script>
+
+    <!-- Utilities and Components -->
+    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+
+    <!-- Optimized Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        *,
+        ::before,
+        ::after {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            --tw-contain-size: ;
+            --tw-contain-layout: ;
+            --tw-contain-paint: ;
+            --tw-contain-style:
+        }
+
+        ::backdrop {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            --tw-contain-size: ;
+            --tw-contain-layout: ;
+            --tw-contain-paint: ;
+            --tw-contain-style:
+        }
+
+        /* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+            border-color: #e5e7eb
+        }
+
+        ::after,
+        ::before {
+            --tw-content: ''
+        }
+
+        :host,
+        html {
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%;
+            -moz-tab-size: 4;
+            tab-size: 4;
+            font-family: Rubik, Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif;
+            font-feature-settings: normal;
+            font-variation-settings: normal;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        body {
+            margin: 0;
+            line-height: inherit
+        }
+
+        hr {
+            height: 0;
+            color: inherit;
+            border-top-width: 1px
+        }
+
+        abbr:where([title]) {
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit
+        }
+
+        a {
+            color: inherit;
+            text-decoration: inherit
+        }
+
+        b,
+        strong {
+            font-weight: bolder
+        }
+
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-feature-settings: normal;
+            font-variation-settings: normal;
+            font-size: 1em
+        }
+
+        small {
+            font-size: 80%
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        table {
+            text-indent: 0;
+            border-color: inherit;
+            border-collapse: collapse
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            font-feature-settings: inherit;
+            font-variation-settings: inherit;
+            font-size: 100%;
+            font-weight: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+            color: inherit;
+            margin: 0;
+            padding: 0
+        }
+
+        button,
+        select {
+            text-transform: none
+        }
+
+        button,
+        input:where([type=button]),
+        input:where([type=reset]),
+        input:where([type=submit]) {
+            -webkit-appearance: button;
+            background-color: transparent;
+            background-image: none
+        }
+
+        :-moz-focusring {
+            outline: auto
+        }
+
+        :-moz-ui-invalid {
+            box-shadow: none
+        }
+
+        progress {
+            vertical-align: baseline
+        }
+
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+            height: auto
+        }
+
+        [type=search] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px
+        }
+
+        ::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+
+        summary {
+            display: list-item
+        }
+
+        blockquote,
+        dd,
+        dl,
+        figure,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        p,
+        pre {
+            margin: 0
+        }
+
+        fieldset {
+            margin: 0;
+            padding: 0
+        }
+
+        legend {
+            padding: 0
+        }
+
+        menu,
+        ol,
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+        dialog {
+            padding: 0
+        }
+
+        textarea {
+            resize: vertical
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            opacity: 1;
+            color: #9ca3af
+        }
+
+        [role=button],
+        button {
+            cursor: pointer
+        }
+
+        :disabled {
+            cursor: default
+        }
+
+        audio,
+        canvas,
+        embed,
+        iframe,
+        img,
+        object,
+        svg,
+        video {
+            display: block;
+            vertical-align: middle
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto
+        }
+
+        [hidden]:where(:not([hidden=until-found])) {
+            display: none
+        }
+
+        .container {
+            width: 100%
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                max-width: 640px
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 768px
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1024px
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .container {
+                max-width: 1280px
+            }
+        }
+
+        @media (min-width: 1536px) {
+            .container {
+                max-width: 1536px
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0
+        }
+
+        .pointer-events-none {
+            pointer-events: none
+        }
+
+        .fixed {
+            position: fixed
+        }
+
+        .absolute {
+            position: absolute
+        }
+
+        .relative {
+            position: relative
+        }
+
+        .bottom-0 {
+            bottom: 0px
+        }
+
+        .left-0 {
+            left: 0px
+        }
+
+        .left-8 {
+            left: 2rem
+        }
+
+        .right-0 {
+            right: 0px
+        }
+
+        .right-8 {
+            right: 2rem
+        }
+
+        .top-0 {
+            top: 0px
+        }
+
+        .top-1\/2 {
+            top: 50%
+        }
+
+        .z-10 {
+            z-index: 10
+        }
+
+        .z-50 {
+            z-index: 50
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .mb-16 {
+            margin-bottom: 4rem
+        }
+
+        .mb-2 {
+            margin-bottom: 0.5rem
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem
+        }
+
+        .mb-6 {
+            margin-bottom: 1.5rem
+        }
+
+        .mb-8 {
+            margin-bottom: 2rem
+        }
+
+        .mt-4 {
+            margin-top: 1rem
+        }
+
+        .mt-8 {
+            margin-top: 2rem
+        }
+
+        .block {
+            display: block
+        }
+
+        .inline-block {
+            display: inline-block
+        }
+
+        .flex {
+            display: flex
+        }
+
+        .hidden {
+            display: none
+        }
+
+        .h-3 {
+            height: 0.75rem
+        }
+
+        .h-32 {
+            height: 8rem
+        }
+
+        .h-4 {
+            height: 1rem
+        }
+
+        .h-6 {
+            height: 1.5rem
+        }
+
+        .h-8 {
+            height: 2rem
+        }
+
+        .h-full {
+            height: 100%
+        }
+
+        .h-screen {
+            height: 100vh
+        }
+
+        .min-h-screen {
+            min-height: 100vh
+        }
+
+        .w-3 {
+            width: 0.75rem
+        }
+
+        .w-32 {
+            width: 8rem
+        }
+
+        .w-4 {
+            width: 1rem
+        }
+
+        .w-6 {
+            width: 1.5rem
+        }
+
+        .w-8 {
+            width: 2rem
+        }
+
+        .w-full {
+            width: 100%
+        }
+
+        .max-w-4xl {
+            max-width: 56rem
+        }
+
+        .max-w-lg {
+            max-width: 32rem
+        }
+
+        .flex-1 {
+            flex: 1 1 0%
+        }
+
+        .-translate-x-1\/3 {
+            --tw-translate-x: -33.333333%;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .-translate-y-1\/2 {
+            --tw-translate-y: -50%;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .-translate-y-1\/3 {
+            --tw-translate-y: -33.333333%;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .translate-x-1\/3 {
+            --tw-translate-x: 33.333333%;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .translate-y-1\/3 {
+            --tw-translate-y: 33.333333%;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .translate-y-10 {
+            --tw-translate-y: 2.5rem;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .translate-y-0 {
+            --tw-translate-y: 0px;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .-rotate-12 {
+            --tw-rotate: -12deg;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .rotate-12 {
+            --tw-rotate: 12deg;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .transform {
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-in
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-10px)
+            }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite
+        }
+
+        .list-disc {
+            list-style-type: disc
+        }
+
+        .flex-col {
+            flex-direction: column
+        }
+
+        .items-center {
+            align-items: center
+        }
+
+        .justify-center {
+            justify-content: center
+        }
+
+        .justify-between {
+            justify-content: space-between
+        }
+
+        .gap-6 {
+            gap: 1.5rem
+        }
+
+        .space-x-2> :not([hidden])~ :not([hidden]) {
+            --tw-space-x-reverse: 0;
+            margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+            margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))
+        }
+
+        .space-x-8> :not([hidden])~ :not([hidden]) {
+            --tw-space-x-reverse: 0;
+            margin-right: calc(2rem * var(--tw-space-x-reverse));
+            margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)))
+        }
+
+        .space-y-2> :not([hidden])~ :not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(0.5rem * var(--tw-space-y-reverse))
+        }
+
+        .overflow-hidden {
+            overflow: hidden
+        }
+
+        .scroll-smooth {
+            scroll-behavior: smooth
+        }
+
+        .rounded-full {
+            border-radius: 9999px
+        }
+
+        .rounded-b-lg {
+            border-bottom-right-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem
+        }
+
+        .rounded-t-lg {
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem
+        }
+
+        .border {
+            border-width: 1px
+        }
+
+        .border-neutral-700 {
+            --tw-border-opacity: 1;
+            border-color: rgb(64 64 64 / var(--tw-border-opacity, 1))
+        }
+
+        .bg-\[\#00FF00\] {
+            --tw-bg-opacity: 1;
+            background-color: rgb(0 255 0 / var(--tw-bg-opacity, 1))
+        }
+
+        .bg-\[\#00FF88\] {
+            --tw-bg-opacity: 1;
+            background-color: rgb(0 255 136 / var(--tw-bg-opacity, 1))
+        }
+
+        .bg-\[\#00FF88\]\/30 {
+            background-color: rgb(0 255 136 / 0.3)
+        }
+
+        .bg-\[\#FF0000\] {
+            --tw-bg-opacity: 1;
+            background-color: rgb(255 0 0 / var(--tw-bg-opacity, 1))
+        }
+
+        .bg-\[\#FF69B4\] {
+            --tw-bg-opacity: 1;
+            background-color: rgb(255 105 180 / var(--tw-bg-opacity, 1))
+        }
+
+        .bg-\[\#FFFF00\] {
+            --tw-bg-opacity: 1;
+            background-color: rgb(255 255 0 / var(--tw-bg-opacity, 1))
+        }
+
+        .bg-neutral-800 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(38 38 38 / var(--tw-bg-opacity, 1))
+        }
+
+        .bg-neutral-900 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(23 23 23 / var(--tw-bg-opacity, 1))
+        }
+
+        .bg-neutral-950 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1))
+        }
+
+        .bg-gradient-to-b {
+            background-image: linear-gradient(to bottom, var(--tw-gradient-stops))
+        }
+
+        .from-neutral-900 {
+            --tw-gradient-from: #171717 var(--tw-gradient-from-position);
+            --tw-gradient-to: rgb(23 23 23 / 0) var(--tw-gradient-to-position);
+            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+        }
+
+        .to-\[\#00FF88\] {
+            --tw-gradient-to: #00FF88 var(--tw-gradient-to-position)
+        }
+
+        .p-2 {
+            padding: 0.5rem
+        }
+
+        .p-6 {
+            padding: 1.5rem
+        }
+
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem
+        }
+
+        .px-6 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem
+        }
+
+        .px-8 {
+            padding-left: 2rem;
+            padding-right: 2rem
+        }
+
+        .py-2 {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem
+        }
+
+        .py-20 {
+            padding-top: 5rem;
+            padding-bottom: 5rem
+        }
+
+        .py-3 {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem
+        }
+
+        .py-4 {
+            padding-top: 1rem;
+            padding-bottom: 1rem
+        }
+
+        .pb-4 {
+            padding-bottom: 1rem
+        }
+
+        .pl-6 {
+            padding-left: 1.5rem
+        }
+
+        .pt-2 {
+            padding-top: 0.5rem
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .font-\[\'Arial\'\] {
+            font-family: 'Arial'
+        }
+
+        .font-\[\'Courier_New\'\] {
+            font-family: 'Courier New'
+        }
+
+        .font-\[\'Helvetica\'\] {
+            font-family: 'Helvetica'
+        }
+
+        .text-2xl {
+            font-size: 1.5rem;
+            line-height: 2rem
+        }
+
+        .text-4xl {
+            font-size: 2.25rem;
+            line-height: 2.5rem
+        }
+
+        .text-5xl {
+            font-size: 3rem;
+            line-height: 1
+        }
+
+        .text-\[12vw\] {
+            font-size: 12vw
+        }
+
+        .text-xl {
+            font-size: 1.25rem;
+            line-height: 1.75rem
+        }
+
+        .font-bold {
+            font-weight: 700
+        }
+
+        .leading-relaxed {
+            line-height: 1.625
+        }
+
+        .text-\[\#00FF88\] {
+            --tw-text-opacity: 1;
+            color: rgb(0 255 136 / var(--tw-text-opacity, 1))
+        }
+
+        .text-\[\#FF69B4\] {
+            --tw-text-opacity: 1;
+            color: rgb(255 105 180 / var(--tw-text-opacity, 1))
+        }
+
+        .text-gray-800 {
+            --tw-text-opacity: 1;
+            color: rgb(31 41 55 / var(--tw-text-opacity, 1))
+        }
+
+        .text-neutral-800\/20 {
+            color: rgb(38 38 38 / 0.2)
+        }
+
+        .text-white {
+            --tw-text-opacity: 1;
+            color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+        }
+
+        .antialiased {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
+
+        .opacity-0 {
+            opacity: 0
+        }
+
+        .opacity-20 {
+            opacity: 0.2
+        }
+
+        .opacity-100 {
+            opacity: 1
+        }
+
+        .transition-all {
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms
+        }
+
+        .transition-colors {
+            transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms
+        }
+
+        .transition-transform {
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms
+        }
+
+        .duration-300 {
+            transition-duration: 300ms
+        }
+
+        .duration-700 {
+            transition-duration: 700ms
+        }
+
+        .hover\:translate-y-\[-5px\]:hover {
+            --tw-translate-y: -5px;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .hover\:scale-105:hover {
+            --tw-scale-x: 1.05;
+            --tw-scale-y: 1.05;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .hover\:scale-125:hover {
+            --tw-scale-x: 1.25;
+            --tw-scale-y: 1.25;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .hover\:bg-\[\#FF69B4\]\/80:hover {
+            background-color: rgb(255 105 180 / 0.8)
+        }
+
+        .hover\:text-\[\#00FF88\]:hover {
+            --tw-text-opacity: 1;
+            color: rgb(0 255 136 / var(--tw-text-opacity, 1))
+        }
+
+        .focus\:not-sr-only:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: 0;
+            margin: 0;
+            overflow: visible;
+            clip: auto;
+            white-space: normal
+        }
+
+        .focus\:absolute:focus {
+            position: absolute
+        }
+
+        .focus\:left-0:focus {
+            left: 0px
+        }
+
+        .focus\:top-0:focus {
+            top: 0px
+        }
+
+        .focus\:z-50:focus {
+            z-index: 50
+        }
+
+        .focus\:bg-white:focus {
+            --tw-bg-opacity: 1;
+            background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
+        }
+
+        .focus\:p-4:focus {
+            padding: 1rem
+        }
+
+        .focus\:text-black:focus {
+            --tw-text-opacity: 1;
+            color: rgb(0 0 0 / var(--tw-text-opacity, 1))
+        }
+
+        @media (min-width: 768px) {
+            .md\:block {
+                display: block
+            }
+
+            .md\:flex {
+                display: flex
+            }
+
+            .md\:hidden {
+                display: none
+            }
+
+            .md\:text-5xl {
+                font-size: 3rem;
+                line-height: 1
+            }
+
+            .md\:text-7xl {
+                font-size: 4.5rem;
+                line-height: 1
+            }
+        }
+    </style>
+    <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.58/build/spline-viewer.js"></script>
+
+</head>
+
+<body>
+    <div class="cursor">
+        <div class="cursor__ball cursor__ball--big">
+            <svg height="30" width="30">
+                <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+            </svg>
+        </div>
+        <div class="cursor__ball cursor__ball--small">
+            <svg height="10" width="10">
+                <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <div class="background-loader">
+        <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+            <div class="wheel"></div>
+            <div class="hamster">
+                <div class="hamster__body">
+                    <div class="hamster__head">
+                        <div class="hamster__ear"></div>
+                        <div class="hamster__eye"></div>
+                        <div class="hamster__nose"></div>
+                    </div>
+                    <div class="hamster__limb hamster__limb--fr"></div>
+                    <div class="hamster__limb hamster__limb--fl"></div>
+                    <div class="hamster__limb hamster__limb--br"></div>
+                    <div class="hamster__limb hamster__limb--bl"></div>
+                    <div class="hamster__tail"></div>
+                </div>
+            </div>
+            <div class="spoke"></div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-cont">
+            <div class="container">
+                <div class="left">
+                    <p>プラナフ</p>
+                </div>
+                <div class="right">
+                    <p>プラナフ</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="public/d2.png" class="slide">
+        </div>
+    </section>
+
+    <div class="socials">
+        <a href="https://github.com/HumerousFi">
+            <i class="fa fa-github icon" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/pinup_chaturvedi/">
+            <i class="fa fa-instagram icon" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/pranav-chaturvedi-1b31a8244">
+            <i class="fa fa-linkedin icon" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <section id="about" class="py-20 bg-neutral-900 min-h-screen flex items-center justify-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-['Helvetica'] font-bold text-center mb-16 text-white">
+            </h2>
+
+            <div class="max-w-4xl mx-auto transform transition-all duration-700 opacity-100 translate-y-0"
+                id="terminal-container">
+                <!-- Terminal header -->
+                <div class="bg-neutral-800 rounded-t-lg p-2 flex items-center">
+                    <div class="flex space-x-2">
+                        <div class="w-3 h-3 rounded-full bg-[#FF0000]"></div>
+                        <div class="w-3 h-3 rounded-full bg-[#FFFF00]"></div>
+                        <div class="w-3 h-3 rounded-full bg-[#00FF00]"></div>
+                    </div>
+                    <div class="flex-1 text-center text-white font-['Courier_New']">
+                        terminal@portfolio ~
+                    </div>
+                </div>
+
+                <!-- Terminal body -->
+                <div class="bg-neutral-950 p-6 rounded-b-lg border border-neutral-700 relative overflow-hidden">
+                    <!-- Terminal text content -->
+                    <div class="text-[#00FF88] font-['Courier_New'] leading-relaxed" id="terminal-text">
+                        <p class="mb-2">$ whoami</p>
+                        <p class="mb-4 terminal-line">Creative developer passionate about building immersive digital
+                            experiences</p>
+
+                        <p class="mb-2">$ cat skills.txt</p>
+                        <div class="mb-4 terminal-line">
+                            <ul class="list-disc pl-6">
+                                <li>JavaScript &amp; TypeScript</li>
+                                <li>React &amp; Next.js</li>
+                                <li>Node.js &amp; Express</li>
+                                <li>UI/UX Design</li>
+                                <li>Animation &amp; Interactive Web</li>
+                            </ul>
+                        </div>
+
+                        <p class="mb-2">$ ls -la interests/</p>
+                        <div class="mb-4 terminal-line">
+                            <p>total 42</p>
+                            <p>drwxr-xr-x 2 user user 4096 Aug 15 12:34 web_development</p>
+                            <p>drwxr-xr-x 2 user user 4096 Aug 15 12:34 ui_design</p>
+                            <p>drwxr-xr-x 2 user user 4096 Aug 15 12:34 creative_coding</p>
+                            <p>drwxr-xr-x 2 user user 4096 Aug 15 12:34 3d_graphics</p>
+                        </div>
+
+                        <p class="mb-2">$ echo $CURRENT_FOCUS</p>
+                        <p class="terminal-line">Building innovative web experiences with modern technologies</p>
+
+                        <div class="mt-4 terminal-cursor" style="visibility: visible;">█</div>
+                    </div>
+
+                    <!-- Koala image top right -->
+                    <div class="absolute top-0 right-0 transform translate-x-1/3 -translate-y-1/3 opacity-20 rotate-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-32 h-32 text-[#00FF88]">
+                            <path fill="currentColor"
+                                d="M.16,205.45c7.31-38.31,22.88-74.7,39.63-109.32,13.1-26.82,22.71-49.22,44.82-71.34,17.77-18,40.64-19.48,62.68-8.84,16.26,7.3,20.68,13.54,18,31.6-13.86,1.93-20.39,12.51-29.59,21.7C115,88.99,103.15,122.26,93.84,159.88c-2.47,10.28-4.55,20.64-6.15,31.06-36.89,9.38-58.69,30.86-65.7,68.5-4.07,21.68-10.72,59.55,1.59,79.46,23,37,77.15,33.16,116.67,22.39,9.43,18.12,26.08,32.82,45.56,40.16,28.56,10.85,60.56,10.57,90.31,2.27,18.15-5.09,34.57-14.37,48.25-26.61,8.94,1.21,17.9,2.08,26.89,2.65,37.24,1.81,77.1-6.09,98.86-39.69,16.64-25.6,9.94-57.36,4.52-85.15-9.5-48.35-40.59-68.47-89.01-72.25-2.83-24.73-10.37-48.53-19.84-71.18-4.41-10.57-9.25-21.06-14.6-31.19-.33-11.33,1.85-22.67,6.46-33.05,4.11-9.26,11.3-20.4,21.49-9.86,8.65,8.85,11.69,22.12,15.34,33.59,16.23-6.28,17.34-22.73,7.64-36.05-12.36-16.18-29.54-27.46-49.4-29.11-19.22-2.07-34.16,11.89-37.73,30.58-.94,4.88-1.38,9.82-1.38,14.77-38.22-22.58-90.14-25.95-132.2-8.92-9.41-19.72-15.27-45.33-38.18-52.77-26.65-8.33-46.23,14.81-55.11,37.28-3.33,8.23-5.95,16.7-7.9,25.3-9.71,6.23-17.24,16.87-20.07,28.42-2.3,9.87-2.22,19.98.95,29.55-20.54,9.6-37.03,25.27-48.77,44.38ZM212.56,260.69c-11.89-11.77-23.73-12.3-34.78-1.57-9.72,9.47-18.68,32.52-.23,38.26,2.53,6.76,3.91,13.85,4.07,21.17-12.31,1.67-24.7,2.15-37.07,1.41-18.41-1.03-36.75-4.55-54.51-10.45-21.91-8.72-30.28-17.42-38.91-33.5-4.15-7.9-6.07-16.97-5.74-25.98.37-10.12,4.12-19.8,10.37-27.74,7.59-9.66,21.88-13.45,32.64-18.69-.16,28.46,7.05,56.36,20.44,81.22,11.3-8.76,19.22-25.8,23.08-38.66,3.86-12.85,6.06-26.2,6.58-39.67,13.08-3.56,25.7-3.84,38.91-6.74,12.49-2.64,18.71-4.71,29.39-12.29.01,14.38-3.25,28.5-9.42,41.47-6.17,12.98-15.08,24.33-26.22,33.16,17.59.28,30.7-5.5,41.41-19.38ZM347.9,214.85c-14.31,11.88-19.33,18.92-20.93,38.16-.27,7.59-1.75,15.64-5.8,22.61-4.06,6.96-12.56,9.51-19.81,7.22-9.38-3.09-16.34-10.93-18.46-20.47-2.12-9.54.09-19.55,5.89-27.36,6.63-8.54,13.63-9.67,23.93-9.16,12.36.89,24.25-4.3,35.19-11ZM262.87,282.41c1.97-12.31-3.32-24.62-14.55-29.06-11.11-4.96-21.12-.66-28.36,10.09-11.36,16.2-.51,38.1,18.97,38.22h.04c12.15,0,22.72-8.12,23.9-19.26ZM167.89,70.33c-8.76,24.09-15.11,49.09-18.96,74.6-11.35,3.57-22.88,6.71-33.96,11.42,5.92-27.03,15.63-52.65,29.82-78.24,8.84-15.68,16.18-24.09,29.41-35.73,2.64,9.42,1.76,18.34-6.31,27.95Zm254.85,76.72c-5.23,2.84-9.14,7.25-11.32,12.71-3.84-19.49-9.2-38.66-16.02-57.33-1.45-4.05-3.07-8.06-4.81-12.03-8.96-19.93-16.04-41.76-16.04-63.44,1.62.32,3.22.79,4.78,1.42,10.93,4.32,16.04,11.05,20.61,21.65,7.59,17.09,13.33,35.18,17.05,53.67,2.12,10.66,3.66,21.68,5.75,43.36ZM316.3,369.87c-25.07,20.56-58.55,29.9-90.87,25.58-18.89-2.47-36.78-10.34-51.26-23.16,24.08,2.6,48.04-3.1,72.17-1.67,23.3,1.31,47.98,7.84,69.96-.75ZM122.82,220.9c-3.52,10.88-5.34,22.26-5.35,33.71,0,2.1.07,4.2.22,6.29,5.08-13.75,6.09-30.05,5.13-39.99Z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <!-- Koala image bottom left -->
+                    <div
+                        class="absolute bottom-0 left-0 transform -translate-x-1/3 translate-y-1/3 opacity-20 -rotate-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-32 h-32 text-[#00FF88]">
+                            <path fill="currentColor"
+                                d="M.16,205.45c7.31-38.31,22.88-74.7,39.63-109.32,13.1-26.82,22.71-49.22,44.82-71.34,17.77-18,40.64-19.48,62.68-8.84,16.26,7.3,20.68,13.54,18,31.6-13.86,1.93-20.39,12.51-29.59,21.7C115,88.99,103.15,122.26,93.84,159.88c-2.47,10.28-4.55,20.64-6.15,31.06-36.89,9.38-58.69,30.86-65.7,68.5-4.07,21.68-10.72,59.55,1.59,79.46,23,37,77.15,33.16,116.67,22.39,9.43,18.12,26.08,32.82,45.56,40.16,28.56,10.85,60.56,10.57,90.31,2.27,18.15-5.09,34.57-14.37,48.25-26.61,8.94,1.21,17.9,2.08,26.89,2.65,37.24,1.81,77.1-6.09,98.86-39.69,16.64-25.6,9.94-57.36,4.52-85.15-9.5-48.35-40.59-68.47-89.01-72.25-2.83-24.73-10.37-48.53-19.84-71.18-4.41-10.57-9.25-21.06-14.6-31.19-.33-11.33,1.85-22.67,6.46-33.05,4.11-9.26,11.3-20.4,21.49-9.86,8.65,8.85,11.69,22.12,15.34,33.59,16.23-6.28,17.34-22.73,7.64-36.05-12.36-16.18-29.54-27.46-49.4-29.11-19.22-2.07-34.16,11.89-37.73,30.58-.94,4.88-1.38,9.82-1.38,14.77-38.22-22.58-90.14-25.95-132.2-8.92-9.41-19.72-15.27-45.33-38.18-52.77-26.65-8.33-46.23,14.81-55.11,37.28-3.33,8.23-5.95,16.7-7.9,25.3-9.71,6.23-17.24,16.87-20.07,28.42-2.3,9.87-2.22,19.98.95,29.55-20.54,9.6-37.03,25.27-48.77,44.38ZM212.56,260.69c-11.89-11.77-23.73-12.3-34.78-1.57-9.72,9.47-18.68,32.52-.23,38.26,2.53,6.76,3.91,13.85,4.07,21.17-12.31,1.67-24.7,2.15-37.07,1.41-18.41-1.03-36.75-4.55-54.51-10.45-21.91-8.72-30.28-17.42-38.91-33.5-4.15-7.9-6.07-16.97-5.74-25.98.37-10.12,4.12-19.8,10.37-27.74,7.59-9.66,21.88-13.45,32.64-18.69-.16,28.46,7.05,56.36,20.44,81.22,11.3-8.76,19.22-25.8,23.08-38.66,3.86-12.85,6.06-26.2,6.58-39.67,13.08-3.56,25.7-3.84,38.91-6.74,12.49-2.64,18.71-4.71,29.39-12.29.01,14.38-3.25,28.5-9.42,41.47-6.17,12.98-15.08,24.33-26.22,33.16,17.59.28,30.7-5.5,41.41-19.38ZM347.9,214.85c-14.31,11.88-19.33,18.92-20.93,38.16-.27,7.59-1.75,15.64-5.8,22.61-4.06,6.96-12.56,9.51-19.81,7.22-9.38-3.09-16.34-10.93-18.46-20.47-2.12-9.54.09-19.55,5.89-27.36,6.63-8.54,13.63-9.67,23.93-9.16,12.36.89,24.25-4.3,35.19-11ZM262.87,282.41c1.97-12.31-3.32-24.62-14.55-29.06-11.11-4.96-21.12-.66-28.36,10.09-11.36,16.2-.51,38.1,18.97,38.22h.04c12.15,0,22.72-8.12,23.9-19.26ZM167.89,70.33c-8.76,24.09-15.11,49.09-18.96,74.6-11.35,3.57-22.88,6.71-33.96,11.42,5.92-27.03,15.63-52.65,29.82-78.24,8.84-15.68,16.18-24.09,29.41-35.73,2.64,9.42,1.76,18.34-6.31,27.95Zm254.85,76.72c-5.23,2.84-9.14,7.25-11.32,12.71-3.84-19.49-9.2-38.66-16.02-57.33-1.45-4.05-3.07-8.06-4.81-12.03-8.96-19.93-16.04-41.76-16.04-63.44,1.62.32,3.22.79,4.78,1.42,10.93,4.32,16.04,11.05,20.61,21.65,7.59,17.09,13.33,35.18,17.05,53.67,2.12,10.66,3.66,21.68,5.75,43.36ZM316.3,369.87c-25.07,20.56-58.55,29.9-90.87,25.58-18.89-2.47-36.78-10.34-51.26-23.16,24.08,2.6,48.04-3.1,72.17-1.67,23.3,1.31,47.98,7.84,69.96-.75ZM122.82,220.9c-3.52,10.88-5.34,22.26-5.35,33.71,0,2.1.07,4.2.22,6.29,5.08-13.75,6.09-30.05,5.13-39.99Z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-8">
+                <button id="terminal-button"
+                    class="bg-[#FF69B4] hover:bg-[#FF69B4]/80 text-white px-6 py-3 rounded-full font-['Arial'] transition-all duration-300 transform hover:scale-105">
+                    Run Terminal
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Intersection Observer for fade-in animation
+        document.addEventListener('DOMContentLoaded', function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const terminalContainer = document.getElementById('terminal-container');
+            observer.observe(terminalContainer);
+
+            // Terminal typing effect
+            const terminalButton = document.getElementById('terminal-button');
+            const terminalText = document.getElementById('terminal-text');
+            const terminalLines = document.querySelectorAll('.terminal-line');
+            const terminalCursor = document.querySelector('.terminal-cursor');
+            let typingInProgress = false;
+
+            // Function to simulate typing effect
+            function typeText(element, text, speed) {
+                return new Promise(resolve => {
+                    let i = 0;
+                    element.textContent = '';
+                    element.classList.remove('hidden');
+
+                    function type() {
+                        if (i < text.length) {
+                            element.textContent += text.charAt(i);
+                            i++;
+                            setTimeout(type, speed);
+                        } else {
+                            resolve();
+                        }
+                    }
+
+                    type();
+                });
+            }
+
+            // Function to reveal a terminal line with typing effect if it's a paragraph
+            async function revealTerminalLine(lineElement, speed) {
+                lineElement.classList.remove('hidden');
+
+                // If it's a paragraph with no children, use typing effect
+                if (lineElement.tagName === 'P' && lineElement.children.length === 0) {
+                    const text = lineElement.textContent;
+                    lineElement.textContent = '';
+                    await typeText(lineElement, text, speed);
+                }
+                // If it contains nested elements, just reveal it
+                else {
+                    return Promise.resolve();
+                }
+            }
+
+            // Start terminal animation
+            async function runTerminal() {
+                if (typingInProgress) return;
+                typingInProgress = true;
+
+                // Reset terminal (hide all lines)
+                terminalLines.forEach(line => {
+                    line.classList.add('hidden');
+                    if (line.tagName === 'P' && line.children.length === 0) {
+                        line.textContent = line.textContent.trim();
+                    }
+                });
+
+                // Blink cursor during typing
+                const cursorInterval = setInterval(() => {
+                    terminalCursor.style.visibility = terminalCursor.style.visibility === 'hidden' ? 'visible' : 'hidden';
+                }, 500);
+
+                // Type each line with delay
+                for (let i = 0; i < terminalLines.length; i++) {
+                    await new Promise(resolve => setTimeout(resolve, 500)); // Delay before each command
+                    await revealTerminalLine(terminalLines[i], 30); // Speed: ms per character
+                }
+
+                clearInterval(cursorInterval);
+                terminalCursor.style.visibility = 'visible';
+                typingInProgress = false;
+            }
+
+            // Click handler for the terminal button
+            terminalButton.addEventListener('click', runTerminal);
+
+            // Auto-run terminal when section is visible
+            const aboutSection = document.getElementById('about');
+            const aboutObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(runTerminal, 1000);
+                        aboutObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            aboutObserver.observe(aboutSection);
+        });
+    </script>
+
+    <section id="project">
+        <div class="banner">
+            <div class="slider" style="--quantity: 10">
+                <div class="item" style="--position: 1"><a href="#"><img src="" alt=""></div></a>
+                <div class="item" style="--position: 2"><a href="#"><img src="" alt=""></div></a>
+                <div class="item" style="--position: 3"><a href="#"><img src="" alt=""></div></a>
+                <div class="item" style="--position: 4"><a href="#"><img src="" alt=""></div></a>
+                <div class="item" style="--position: 5"><a href="#"><img src="" alt=""></div></a>
+                <div class="item" style="--position: 6"><a href="#"><img src="" alt=""></div></a>
+                <div class="item" style="--position: 7"><a href="#"><img src="" alt=""></div></a>
+                <div class="item" style="--position: 8"><a href="#"><img src="" alt=""></div></a>
+                <div class="item" style="--position: 9"><a href="#"><img src="" alt=""></div></a>
+                <div class="item" style="--position: 10"><a href="#"><img src="" alt=""></div></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelector('.background-loader').style.display = 'none';
+        });
+        window.addEventListener('scroll', function () {
+            const aboutSection = document.querySelector('#about');
+            const projectSection = document.querySelector('#project');
+            const scrollPosition = window.scrollY;
+
+            //about section
+            if (scrollPosition > window.innerHeight / 2) {
+                aboutSection.classList.add('slide-up');
+            } else {
+                aboutSection.classList.remove('slide-up');
+            }
+
+            //project section
+            if (scrollPosition > window.innerHeight * 1.5) {
+                projectSection.classList.add('slide-up');
+            } else {
+                projectSection.classList.remove('slide-up');
+            }
+        });
+
+    </script>
+
+    <script src="js/cursor.js"></script>
+    <script src="js/about.js"></script>
+</body>
+
+</html>
